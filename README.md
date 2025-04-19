@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# 🎮 Consumo de API de Juegos Gratuitos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenido a una aplicación desarrollada con **React** que consume datos en tiempo real desde la [API FreeToGame](https://www.freetogame.com/api-doc). Esta app te permite explorar, filtrar y visualizar juegos gratuitos de diversas plataformas.
 
-## Available Scripts
+[Ver el repositorio en GitHub](https://github.com/Leonardo1599/Consumo-de-Api-Gratuita)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Características principales
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🎲 **Listado dinámico de juegos**
+- 🎯 **Filtros por plataforma, categoría y orden**
+- 🔍 **Vista detallada de cada juego**
+- 📱 **Diseño responsivo adaptable a móviles y escritorio**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tecnologías utilizadas
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+| Tecnología | Descripción |
+|------------|-------------|
+| ⚛️ React | Framework principal para construir la interfaz |
+| 📡 Axios | Cliente HTTP para conectarse a la API |
+| 🎨 CSS | Estilización responsiva y moderna |
+| 🌐 FreeToGame API | Fuente externa de datos con juegos gratuitos |
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📁 Estructura del proyecto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```plaintext
+src/
+├── components/
+│   ├── JuegosList.jsx       # Lista principal de juegos
+│   ├── JuegoDetalle.jsx     # Vista individual de un juego
+│   ├── Filtros.jsx          # Componentes de filtros
+├── services/
+│   └── api.js               # Lógica centralizada para llamadas a la API
+├── styles/
+│   ├── JuegosList.css
+│   ├── JuegoDetalle.css
+│   └── Filtros.css
+├── App.jsx                  # Punto central de la app
+├── App.css                  # Estilos globales
+└── index.js                 # Punto de entrada
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Instalación y Ejecución
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Sigue estos pasos para clonar y ejecutar la aplicación en tu entorno local:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Clona el repositorio
+git clone https://github.com/Leonardo1599/Consumo-de-Api-Gratuita.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Entra al directorio del proyecto
+cd Consumo-de-Api-Gratuita
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Instala las dependencias necesarias
+npm install
 
-## Learn More
+# Inicia la aplicación en modo desarrollo
+npm start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📚 Documentación de referencia
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [FreeToGame API Docs](https://www.freetogame.com/api-doc)
+- [React Oficial](https://reactjs.org/)
+- [Axios HTTP](https://axios-http.com/)
