@@ -32,17 +32,49 @@ const JuegosList = () => {
     }));
   };
 
+  const renderFiltrosActivos = () => {
+    const { platform, category, 'sort-by': sortBy } = filters;
+
+    if (!platform && !category && !sortBy) return null;
+
+    const labels = {
+      platform: {
+        pc: 'PC',
+        browser: 'Navegador',
+      },
+      category: {
+        shooter: 'Shooter',
+        mmorpg: 'MMORPG',
+        fantasy: 'Fantasía',
+      },
+      'sort-by': {
+        'release-date': 'Fecha de lanzamiento',
+        alphabetical: 'Orden alfabético',
+      },
+    };
+
+    return (
+      <p className="filtros-activos">
+        Mostrando juegos
+        {platform && ` en ${labels.platform[platform] || platform}`}
+        {category && ` | categoría: ${labels.category[category] || category}`}
+        {sortBy && ` | ordenados por: ${labels['sort-by'][sortBy] || sortBy}`}
+      </p>
+    );
+  };
+
   if (selectedGame) {
     return <JuegoDetalle gameId={selectedGame} onBack={() => setSelectedGame(null)} />;
   }
 
-  if (error) return <p>{error}</p>;
-  if (loading) return <p>Cargando juegos...</p>;
+  if (error) return <p className="mensaje-error">{error}</p>;
+  if (loading) return <p className="mensaje-cargando">Cargando juegos...</p>;
 
   return (
     <div>
       <h2>Lista de Juegos Gratuitos</h2>
       <Filtros onFilterChange={handleFilterChange} />
+      {renderFiltrosActivos()}
       <div className="juegos-grid">
         {juegos.map((juego) => (
           <div

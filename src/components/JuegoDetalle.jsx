@@ -21,17 +21,31 @@ const JuegoDetalle = ({ gameId, onBack }) => {
       });
   }, [gameId]);
 
-  if (error) return <p>{error}</p>;
-  if (loading) return <p>Cargando detalles del juego...</p>;
+  if (error) return <p className="mensaje-error">{error}</p>;
+  if (loading) return <p className="mensaje-cargando">Cargando detalles del juego...</p>;
 
   return (
     <div className="juego-detalle">
-      <button onClick={onBack}>Volver</button>
-      <h2>{juego.title}</h2>
-      <img src={juego.thumbnail} alt={juego.title} />
-      <p>{juego.description}</p>
-      <p><strong>Género:</strong> {juego.genre}</p>
-      <p><strong>Plataforma:</strong> {juego.platform}</p>
+      <div className="header">
+        <button className="volver-btn" onClick={onBack}>← Volver</button>
+        <h2>{juego.title}</h2>
+      </div>
+
+      <div className="contenido-principal">
+        <img src={juego.thumbnail} alt={juego.title} className="juego-imagen" />
+        <p className="descripcion">{juego.description}</p>
+      </div>
+
+      <div className="info-extra">
+        <p><strong>Género:</strong> {juego.genre}</p>
+        <p><strong>Plataforma:</strong> {juego.platform}</p>
+      </div>
+
+      <div className="cta">
+        <a href={juego.game_url} target="_blank" rel="noopener noreferrer" className="play-btn">
+          Jugar ahora
+        </a>
+      </div>
     </div>
   );
 };
