@@ -1,0 +1,24 @@
+.juego-detalle {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .juego-detalle img {
+    width: 50%;
+    border-radius: 10px;
+    margin: 20px 0;
+  }
+  
+  .juego-detalle button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .juego-detalle button:hover {
+    background-color: #0056b3;
+  }
