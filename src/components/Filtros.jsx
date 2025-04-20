@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Filtros.css';
+import '../styles/Filtros.css'; // Asegúrate de tener este archivo CSS para estilos
 
 const Filtros = ({ onFilterChange }) => {
   const handleFilterChange = (e) => {

@@ -5,7 +5,7 @@ import JuegosList from './components/JuegosList';
 function App() {
   return (
     <div className="App">
-      <h1>PlayRadar</h1>
+      <h1>Consumo de API Gratuita de FREETOGAME</h1>
       <JuegosList />
     </div>
   );
