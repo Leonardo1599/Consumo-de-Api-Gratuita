@@ -4,6 +4,7 @@ import Filtros from './Filtros';
 import JuegoDetalle from './JuegoDetalle';
 import '../styles/JuegosList.css';
 
+//creacion de la lista
 const JuegosList = () => {
   const [juegos, setJuegos] = useState([]);
   const [loading, setLoading] = useState(true);
